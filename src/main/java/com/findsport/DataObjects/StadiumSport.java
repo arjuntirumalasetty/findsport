@@ -5,8 +5,32 @@ package com.findsport.DataObjects;
  */
 public class StadiumSport {
 
-    private String stadiumID;
-    private String sportID;
-    private String sportName;
-    pr
+    public int getStadiumID() {
+        return stadiumID;
+    }
+
+    public int getSportID() {
+        return sportID;
+    }
+
+    public int getCourtCount() {
+        return courtCount;
+    }
+
+    private int stadiumID;
+
+    public void setStadiumID(int stadiumID) {
+        this.stadiumID = stadiumID;
+    }
+
+    public void setSportID(int sportID) {
+        this.sportID = sportID;
+    }
+
+    public void setCourtCount(int courtCount) {
+        this.courtCount = courtCount;
+    }
+
+    private int sportID;
+    private int courtCount;
 }
