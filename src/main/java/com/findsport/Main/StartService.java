@@ -9,6 +9,12 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * Created by Arjun on 12/27/2016.
  */
 public class StartService {
+	
+	private static ApplicationContext context =
+            new ClassPathXmlApplicationContext("Springbean.xml");
+    private static CreateDBConnection connection = (CreateDBConnection) context.getBean("createDBConnection");
+    private static JdbcTemplate template;
+    
     public static void main(String[] args){
         try {
             ApplicationContext context =
@@ -21,5 +27,12 @@ public class StartService {
             System.out.print(e);
         }
 
+    }
+    
+    public static JdbcTemplate getJdbcTemplate() {
+    	if (template == null) {
+    		template = connection.getConnection();
+    	}
+    	return template;
     }
 }

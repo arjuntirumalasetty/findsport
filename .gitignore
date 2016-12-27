@@ -41,6 +41,9 @@ RawBlameHistory
 *.lst
 .idea/
 .target/
+.classpath/
+.project/
+.settings/
 
 # Logs and databases #
 ######################
@@ -58,3 +61,4 @@ ehthumbs.db
 Thumbs.db
 Contact GitHub API Training Shop Blog About
 © 2016 GitHub, Inc. Terms Privacy Security Status Help
+/target/
