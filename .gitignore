@@ -38,6 +38,7 @@ RawBlameHistory
 *.tar
 *.zip
 *.iml
+*.lst
 
 # Logs and databases #
 ######################

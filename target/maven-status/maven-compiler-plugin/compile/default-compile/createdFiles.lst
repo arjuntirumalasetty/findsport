@@ -1,1 +1,6 @@
+com\findsport\DataAccessor\StadiumDAO.class
+com\findsport\DataObjects\CourtAvailability.class
+com\findsport\DataObjects\Sport.class
+com\findsport\DataObjects\StadiumSport.class
 Test.class
+com\findsport\DataObjects\Stadium.class
