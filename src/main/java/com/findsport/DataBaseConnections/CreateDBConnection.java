@@ -1,30 +1,29 @@
 package com.findsport.DataBaseConnections;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Connection;
 
+@Configuration
 public class CreateDBConnection {
-	
+
 	// Database settings
-	private static String url = "jdbc:mysql://localhost:3306/findsport";
-	private static String dbName = "findsport";
-	private static String userName = "root"; 
-	private static String password = "arjun613";
-		
-	public static Connection getConnection()
+
+	private DriverManagerDataSource dataSource;
+	private JdbcTemplate jdbcTemplate;
+
+	public void setDataSource(DriverManagerDataSource dataSource) {
+		this.dataSource = dataSource;
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+	public JdbcTemplate getConnection()
 	{
-		Connection con=null;
-		try 
-		{
-			con = DriverManager.getConnection(url,userName,password);
-			con.setAutoCommit(false);
-		} 
-		catch (SQLException e) 
-		{
-			e.printStackTrace();
-		}
-		return con;
+		return jdbcTemplate;
 		   
 	}
 }
