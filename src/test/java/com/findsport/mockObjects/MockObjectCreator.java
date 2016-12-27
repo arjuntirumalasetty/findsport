@@ -1,5 +1,6 @@
 package com.findsport.mockObjects;
 
+import com.findsport.DataAccessor.StadiumDAO;
 import com.findsport.DataObjects.Stadium;
 
 public class MockObjectCreator {
@@ -13,5 +14,13 @@ public class MockObjectCreator {
 		mockStadium.setStadiumPhoneNo("1234567890");	
 		return mockStadium;
 	}
+
+	public static void main (String[] args) {
+
+		Stadium stadiumDataObject = MockObjectCreator.getMockStadiumObject();
+		System.out.println(" success : " + StadiumDAO.insertData(stadiumDataObject));
+
+	}
+
 
 }

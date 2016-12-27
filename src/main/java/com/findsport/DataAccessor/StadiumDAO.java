@@ -6,7 +6,6 @@ import java.util.Properties;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.findsport.DataObjects.Stadium;
 import com.findsport.Main.StartService;
-import com.findsport.mockObjects.MockObjectCreator;
 
 /**
  * Created by Arjun on 12/27/2016.
@@ -33,9 +32,5 @@ public class StadiumDAO {
 		return true;	
 	}
 
-	public static void main (String[] args) {
-		Stadium stadiumDataObject = MockObjectCreator.getMockStadiumObject();
-		System.out.println(" success : " + insertData(stadiumDataObject));
 
-	}
 }
