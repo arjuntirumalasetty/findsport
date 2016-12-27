@@ -39,6 +39,8 @@ RawBlameHistory
 *.zip
 *.iml
 *.lst
+.idea/
+.target/
 
 # Logs and databases #
 ######################
